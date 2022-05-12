@@ -20,9 +20,9 @@ namespace GeradorTestes.Dominio.ModuloDisciplina
             Nome = nome;
         }
 
-        public override void atualizar(Disciplina registro)
+        public override void atualizar(Disciplina disciplina)
         {
-            throw new NotImplementedException();
+           this.Nome = disciplina.Nome;
         }
 
         public override string ToString()

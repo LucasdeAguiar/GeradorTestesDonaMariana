@@ -1,4 +1,5 @@
 ﻿using GeradorTestes.Dominio.Compartilhado;
+using GeradorTestes.Dominio.ModuloMateria;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,32 +11,23 @@ namespace GeradorTestes.Dominio.ModuloQuestao
     [Serializable]
     public class Questao : EntidadeBase<Questao>
     {
-        public List<Alternativa> alternativas = new List<Alternativa>();
+        public Materia Materia { get; set; }
+        public string Enunciado { get; set; }
 
-        public Questao(string descricao, int bimestre)
+        public List<Alternativa> Alternativas { get; set; }
+
+        public Questao()
         {
-            Descricao = descricao;
-            Bimestre = bimestre;
+            this.Alternativas = new List<Alternativa>();
         }
 
-        public string Descricao { get; set; }
-        public int Bimestre { get; set; }
 
-
-        public void assinalarCorrreta(Alternativa alternativaCorreta)
+        public override void atualizar(Questao questao)
         {
-            foreach (Alternativa alternativa in alternativas)
-            {
-                if (alternativa.Descricao == alternativaCorreta.Descricao)
-                {
-                    alternativa.marcarComoCorreta();
-                }
-            }
+            this.Materia = questao.Materia;
+            this.Enunciado = questao.Enunciado;
+            this.Alternativas = questao.Alternativas;
         }
 
-        public override void atualizar(Questao registro)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using GeradorTestes.Dominio.ModuloDisciplina;
 using GeradorTestes.Dominio.ModuloMateria;
+using GeradorTestes.Dominio.ModuloQuestao;
 using GeradorTestes.Infra.Arquivos.Compartilhado.Serializadores;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace GeradorTestes.Infra.Arquivos.Compartilhado
         {
             Materias = new List<Materia>();
             Disciplinas = new List<Disciplina>();
+            Questoes = new List<Questao>();
           
         }
 
@@ -30,7 +32,7 @@ namespace GeradorTestes.Infra.Arquivos.Compartilhado
 
         public List<Materia> Materias{ get; set; }
         public List<Disciplina> Disciplinas { get; set; }
-
+        public List<Questao> Questoes { get; set; }
 
         public void GravarDados()
         {
@@ -46,6 +48,9 @@ namespace GeradorTestes.Infra.Arquivos.Compartilhado
 
             if (ctx.Disciplinas.Any())
                 this.Disciplinas.AddRange(ctx.Disciplinas);
+
+            if (ctx.Questoes.Any())
+                this.Questoes.AddRange(ctx.Questoes);
 
         }
     }

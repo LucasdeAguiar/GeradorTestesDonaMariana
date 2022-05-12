@@ -11,10 +11,9 @@ namespace GeradorTestes.Dominio.ModuloQuestao
     public class Alternativa 
     {
         public string Descricao { get; set; }
-
         public bool estaCorreta{ get; set; }
 
-        public Alternativa(string descricao, bool estaCorreta)
+        public Alternativa(string descricao)
         {
             Descricao = descricao;
             this.estaCorreta = false;
@@ -22,17 +21,14 @@ namespace GeradorTestes.Dominio.ModuloQuestao
 
         public override string ToString()
         {
-            return Descricao;
+            string status = estaCorreta == true ? "Correta" : "Falsa";
+            return $"Alternativa: {Descricao} | {status}";
         }
 
-        public void marcarComoCorreta()
+        public void atualizarAlternativa(Alternativa alternativa)
         {
-            estaCorreta = true;
-        }
-
-        internal void MarcarComoFalsa()
-        {
-            estaCorreta = false;
+            this.Descricao = alternativa.Descricao;
+            this.estaCorreta = alternativa.estaCorreta;
         }
     }
 }
