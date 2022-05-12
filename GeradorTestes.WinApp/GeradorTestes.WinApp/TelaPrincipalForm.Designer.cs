@@ -33,14 +33,15 @@
             this.disciplinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disciplinasMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.panelRegistros = new System.Windows.Forms.Panel();
             this.btnInserir = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.labelRodape = new System.Windows.Forms.ToolStripStatusLabel();
             this.labelTipoCadastro = new System.Windows.Forms.ToolStripLabel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.labelRodape = new System.Windows.Forms.ToolStripStatusLabel();
+            this.panelRegistros = new System.Windows.Forms.Panel();
+            this.materiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolbox.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -59,7 +60,8 @@
             // disciplinaToolStripMenuItem
             // 
             this.disciplinaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.disciplinasMenuItem});
+            this.disciplinasMenuItem,
+            this.materiasToolStripMenuItem});
             this.disciplinaToolStripMenuItem.Name = "disciplinaToolStripMenuItem";
             this.disciplinaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.disciplinaToolStripMenuItem.Text = "Cadastros";
@@ -67,7 +69,7 @@
             // disciplinasMenuItem
             // 
             this.disciplinasMenuItem.Name = "disciplinasMenuItem";
-            this.disciplinasMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.disciplinasMenuItem.Size = new System.Drawing.Size(180, 22);
             this.disciplinasMenuItem.Text = "Disciplinas";
             this.disciplinasMenuItem.Click += new System.EventHandler(this.disciplinasMenuItem_Click);
             // 
@@ -84,24 +86,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(718, 33);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.labelRodape});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(718, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // panelRegistros
-            // 
-            this.panelRegistros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelRegistros.Location = new System.Drawing.Point(46, 63);
-            this.panelRegistros.Name = "panelRegistros";
-            this.panelRegistros.Size = new System.Drawing.Size(616, 335);
-            this.panelRegistros.TabIndex = 3;
             // 
             // btnInserir
             // 
@@ -146,17 +130,42 @@
             this.toolStripButton4.Size = new System.Drawing.Size(30, 30);
             this.toolStripButton4.Text = "toolStripButton4";
             // 
+            // labelTipoCadastro
+            // 
+            this.labelTipoCadastro.Name = "labelTipoCadastro";
+            this.labelTipoCadastro.Size = new System.Drawing.Size(75, 30);
+            this.labelTipoCadastro.Text = "tipoCadastro";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.labelRodape});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(718, 22);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // labelRodape
             // 
             this.labelRodape.Name = "labelRodape";
             this.labelRodape.Size = new System.Drawing.Size(44, 17);
             this.labelRodape.Text = "rodapé";
             // 
-            // labelTipoCadastro
+            // panelRegistros
             // 
-            this.labelTipoCadastro.Name = "labelTipoCadastro";
-            this.labelTipoCadastro.Size = new System.Drawing.Size(75, 30);
-            this.labelTipoCadastro.Text = "tipoCadastro";
+            this.panelRegistros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelRegistros.Location = new System.Drawing.Point(46, 63);
+            this.panelRegistros.Name = "panelRegistros";
+            this.panelRegistros.Size = new System.Drawing.Size(616, 335);
+            this.panelRegistros.TabIndex = 3;
+            // 
+            // materiasToolStripMenuItem
+            // 
+            this.materiasToolStripMenuItem.Name = "materiasToolStripMenuItem";
+            this.materiasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.materiasToolStripMenuItem.Text = "Materias";
+            this.materiasToolStripMenuItem.Click += new System.EventHandler(this.materiasToolStripMenuItem_Click);
             // 
             // TelaPrincipalForm
             // 
@@ -197,5 +206,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripStatusLabel labelRodape;
         private System.Windows.Forms.ToolStripLabel labelTipoCadastro;
+        private System.Windows.Forms.ToolStripMenuItem materiasToolStripMenuItem;
     }
 }

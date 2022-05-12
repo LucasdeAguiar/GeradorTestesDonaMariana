@@ -12,10 +12,10 @@ namespace GeradorTestes.Infra.Arquivos.ModuloMateria
 {
     public class RepositorioMateriaEmArquivo : RepositorioEmArquivoBase<Materia>, IRepositorioMateria
     {
-        public RepositorioMateriaEmArquivo(DataContext dataContext) : base(dataContext)
+        public RepositorioMateriaEmArquivo(DataContext context) : base(context)
         {
-            if (dataContext.Materias.Count > 0)
-                contador = dataContext.Materias.Max(x => x.Numero);
+            if (context.Materias.Count > 0)
+                contador = context.Materias.Max(x => x.Numero);
         }
 
         public override List<Materia> ObterRegistros()
@@ -25,8 +25,7 @@ namespace GeradorTestes.Infra.Arquivos.ModuloMateria
 
         public override AbstractValidator<Materia> ObterValidador()
         {
-            //return new ValidadorMateria();
-            return null;
+            return new ValidadorMateria();
         }
         
     }

@@ -1,6 +1,6 @@
-﻿namespace GeradorTestes.WinApp.ModuloDisciplina
+﻿namespace GeradorTestes.WinApp.ModuloMateria
 {
-    partial class TabelaDisciplinasControl
+    partial class TabelaMateriasControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,27 +29,38 @@
         private void InitializeComponent()
         {
             this.grid = new System.Windows.Forms.DataGridView();
+            this.panelMateria = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
+            this.panelMateria.SuspendLayout();
             this.SuspendLayout();
             // 
             // grid
             // 
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid.Location = new System.Drawing.Point(0, 0);
+            this.grid.Location = new System.Drawing.Point(0, 3);
             this.grid.Name = "grid";
             this.grid.RowTemplate.Height = 25;
-            this.grid.Size = new System.Drawing.Size(370, 274);
+            this.grid.Size = new System.Drawing.Size(572, 320);
             this.grid.TabIndex = 0;
             // 
-            // TabelaDisciplinasControl
+            // panelMateria
+            // 
+            this.panelMateria.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelMateria.Controls.Add(this.grid);
+            this.panelMateria.Location = new System.Drawing.Point(0, 0);
+            this.panelMateria.Name = "panelMateria";
+            this.panelMateria.Size = new System.Drawing.Size(578, 320);
+            this.panelMateria.TabIndex = 0;
+            // 
+            // TabelaMateriasControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.grid);
-            this.Name = "TabelaDisciplinasControl";
-            this.Size = new System.Drawing.Size(370, 274);
+            this.Controls.Add(this.panelMateria);
+            this.Name = "TabelaMateriasControl";
+            this.Size = new System.Drawing.Size(578, 320);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
+            this.panelMateria.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -57,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView grid;
+        private System.Windows.Forms.Panel panelMateria;
     }
 }

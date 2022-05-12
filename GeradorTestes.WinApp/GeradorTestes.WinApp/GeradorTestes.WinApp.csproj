@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ModuloMateria\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GeradorTestes.Infra.Arquivos\GeradorTestes.Infra.Arquivos.csproj" />
   </ItemGroup>
 

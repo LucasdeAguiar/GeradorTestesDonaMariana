@@ -1,7 +1,9 @@
 ﻿using GeradorTestes.Infra.Arquivos.Compartilhado;
 using GeradorTestes.Infra.Arquivos.ModuloDisciplina;
+using GeradorTestes.Infra.Arquivos.ModuloMateria;
 using GeradorTestes.WinApp.Compartilhado;
 using GeradorTestes.WinApp.ModuloDisciplina;
+using GeradorTestes.WinApp.ModuloMateria;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,6 +49,11 @@ namespace GeradorTestes.WinApp
 
 
         private void disciplinasMenuItem_Click(object sender, EventArgs e)
+        {
+            ConfigurarTelaPrincipal((ToolStripMenuItem)sender);
+        }
+
+        private void materiasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ConfigurarTelaPrincipal((ToolStripMenuItem)sender);
         }
@@ -125,12 +132,14 @@ namespace GeradorTestes.WinApp
         private void InicializarControladores()
         {
             var repositorioDisciplina = new RepositorioDisciplinaEmArquivo(contextoDados);
-       
+            var repositorioMateria = new RepositorioMateriaEmArquivo(contextoDados);
 
             controladores = new Dictionary<string, ControladorBase>();
 
             controladores.Add("Disciplinas", new ControladorDisciplina(repositorioDisciplina));
-          
+            controladores.Add("Materias", new ControladorMateria(repositorioMateria, repositorioDisciplina));
         }
+
+       
     }
 }
